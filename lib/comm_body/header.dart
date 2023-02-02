@@ -7,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class Header extends StatelessWidget {
-  const Header({super.key});
-
+  const Header({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     
@@ -17,8 +17,8 @@ class Header extends StatelessWidget {
       padding: EdgeInsets.all(kDefaultPadding),
       child: Row(
         children: [
-          const Text("Dashboard", style: TextStyle(
-            fontWeight: FontWeight.w500, fontSize: 30, color: CBlackColor
+          Text(title, style: GoogleFonts.rubik(
+            fontSize: 30, fontWeight: FontWeight.w500, color: CBlackColor
           ),),
           SizedBox(width: kDefaultPadding * 2,),
           Expanded(child: TextField(

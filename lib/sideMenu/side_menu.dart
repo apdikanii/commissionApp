@@ -22,18 +22,17 @@ class SideMenu extends StatelessWidget {
         child: Column(
           children: [
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 35, top: 53, bottom: 12),
-                  child: Image.asset( "assets/images/logo.png", width: 199, height: 60,
-              ),
-                ),
-              // const Spacer(),
-              if(!Responsive.isDesktop(context)) 
-              const CloseButton()
+              const Spacer(),
+              if(!Responsive.isDesktop(context)) CloseButton(),
               ],
             ),
+            Padding(
+                  padding: const EdgeInsets.only(left: 15, top: 33, bottom: 12),
+                  child: Image.asset( "assets/images/logo.png", width: 170, height: 60,
+              ),
+                ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 35),
               child: Divider(thickness: 1, color: CGreyColor,),
@@ -53,27 +52,29 @@ class SideMenu extends StatelessWidget {
                 
             //   ],
             // )
-            SideMenuItem(iconSrc: "assets/Icons/Send.svg",
-             title: "Dashboard", press: (){}, 
+            SideMenuItem(iconSrc: "assets/Icons/Trash.svg",
+             title: "Dashboard", press: (){
+              
+             }, 
              isActive: true, isHover: false),
 
-             SideMenuItem(iconSrc: "assets/Icons/Send.svg",
+             SideMenuItem(iconSrc: "assets/Icons/Trash.svg",
              title: "Agents", press: (){}, 
              isActive: false, isHover: false),
 
-             SideMenuItem(iconSrc: "assets/Icons/Send.svg",
+             SideMenuItem(iconSrc: "assets/Icons/Trash.svg",
              title: "Customers", press: (){}, 
              isActive: false, isHover: false),
 
-             SideMenuItem(iconSrc: "assets/Icons/Send.svg",
+             SideMenuItem(iconSrc: "assets/Icons/Trash.svg",
              title: "Products", press: (){}, 
              isActive: false, isHover: false),
 
-             SideMenuItem(iconSrc: "assets/Icons/Send.svg",
+             SideMenuItem(iconSrc: "assets/Icons/Trash.svg",
              title: "Orders", press: (){}, 
              isActive: false, isHover: false),
 
-             SideMenuItem(iconSrc: "assets/Icons/Send.svg",
+             SideMenuItem(iconSrc: "assets/Icons/Trash.svg",
              title: "Users", press: (){}, 
              isActive: false, isHover: false),
 
