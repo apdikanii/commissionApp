@@ -13,6 +13,8 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Container(
+      margin: EdgeInsets.all(0),
+      
       color: CWhiteColor,
       padding: EdgeInsets.all(kDefaultPadding),
       child: Row(

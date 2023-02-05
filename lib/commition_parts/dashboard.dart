@@ -1,5 +1,5 @@
 import 'package:commit/commition_parts/dashboard_card.dart';
-import 'package:commit/commition_parts/total_comm.dart';
+import 'package:commit/commition_parts/total_comm_table.dart';
 import 'package:commit/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
