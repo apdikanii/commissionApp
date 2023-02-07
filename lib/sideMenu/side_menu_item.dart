@@ -1,6 +1,6 @@
 
 import 'package:commit/constants.dart';
-import 'package:commit/comm_body/pages/agency.dart';
+import 'package:commit/comm_body/pages/agencyPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';

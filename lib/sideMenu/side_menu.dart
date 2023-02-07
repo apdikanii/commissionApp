@@ -1,7 +1,11 @@
+import 'package:commit/comm_body/comm_body.dart';
 import 'package:commit/comm_body/header.dart';
+import 'package:commit/comm_body/pages/customersPage.dart';
+import 'package:commit/commition_parts/dashboard.dart';
 import 'package:commit/constants.dart';
 import 'package:commit/extention.dart';
-import 'package:commit/comm_body/pages/agency.dart';
+import 'package:commit/comm_body/pages/agencyPage.dart';
+import 'package:commit/main_screen.dart';
 import 'package:commit/responsive.dart';
 import 'package:commit/sideMenu/side_menu_item.dart';
 import 'package:flutter/foundation.dart';
@@ -69,29 +73,41 @@ class SideMenu extends StatelessWidget {
             padding: padding,
             child: Column(
               children: [
-                buildMenuItem(
-                    text: 'Agency',
-                    icon: Icons.people,
-                    onClicked: () => selectedItem(context, 0),
+                 buildMenuItem(
+                    text: 'Dashboard',
+                    icon: Icons. dashboard_outlined,
+                    onClicked: () => selectedItem(context, 0)
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Customers',
-                    icon: Icons.favorite_border,
+                    text: 'Agents',
+                    icon: Icons.person_add_outlined,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Products',
-                    icon: Icons.workspaces_outline,
+                    text: 'Customers',
+                    icon: Icons.production_quantity_limits_outlined,
                     onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Orders',
-                    icon: Icons.update,
+                    text: 'Products',
+                    icon: Icons.view_agenda_outlined,
                     onClicked: () => selectedItem(context, 3),
                   ),
+                  const SizedBox(height: 16),
+                  buildMenuItem(
+                    text: 'Orders',
+                    icon: Icons.shopping_cart_sharp,
+                    onClicked: () => selectedItem(context, 4),
+                  ),
+                  buildMenuItem(
+                    text: 'Users',
+                    icon: Icons.view_agenda_outlined,
+                    onClicked: () => selectedItem(context, 5),
+                  ),
+                  const SizedBox(height: 16),
               ],
             )
           ),
@@ -164,10 +180,30 @@ class SideMenu extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Agency(),
+          builder: (context) => MainScreen(),
         ));
         break;
       case 1:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => CustomersPage(),
+        ));
+        break;
+        case 2:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => CustomersPage(),
+        ));
+        break;
+      case 3:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => Agency(),
+        ));
+        break;
+      case 4:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => Dashboard(),
+        ));
+        break;
+      case 5:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Agency(),
         ));

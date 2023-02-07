@@ -18,7 +18,7 @@ class Dashboard extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                DashboardCard(title: "Agency", bottomText: "View All", BColor: Color(0xFF398A07), numValue: "5,000", color: CAgencyColor),
+                DashboardCard(title: "Agents", bottomText: "View All", BColor: Color(0xFF398A07), numValue: "5,000", color: CAgencyColor),
                 DashboardCard(title: "Customers", bottomText: "View All", BColor: Color(0xFF3A2AAF), numValue: "12 456", color: CCustomerColor),
                 DashboardCard(title: "Products", bottomText: "View All", BColor: Color(0xFFB65801), numValue: "21", color: CProductColor),
                 DashboardCard(title: "Orders", bottomText: "View All", BColor: Color(0xFF0472AF), numValue: "\$ 507", color: COrdersColor),
